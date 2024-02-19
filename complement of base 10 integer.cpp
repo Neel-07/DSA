@@ -1,4 +1,4 @@
-// Problem statement :https://leetcode.com/problems/complement-of-base-10-integer/
+// Problem link :https://leetcode.com/problems/complement-of-base-10-integer/
 
 
 class Solution {
