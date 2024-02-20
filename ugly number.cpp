@@ -1,5 +1,10 @@
 // problem link: https://leetcode.com/problems/ugly-number/
 
+
+#include<vector>
+#include <algorithm>
+
+
 class Solution 
 {
     public:
@@ -21,11 +26,11 @@ bool isUgly(int num) {
 
 // Optimized approach to find ugly numbers
 int getNthUglyNumber(int n) {
-    vector<int> uglyNums(n, 1);
+    std::vector<int> uglyNums(n, 1);
     int i2 = 0, i3 = 0, i5 = 0;
     int nextMultipleOf2 = 2, nextMultipleOf3 = 3, nextMultipleOf5 = 5;
     for (int i = 1; i < n; i++) {
-        int nextUglyNum = min(nextMultipleOf2, min(nextMultipleOf3, nextMultipleOf5));
+        int nextUglyNum = std::min(nextMultipleOf2, std::min(nextMultipleOf3, nextMultipleOf5));
         uglyNums[i] = nextUglyNum;
         if (nextUglyNum == nextMultipleOf2) {
             i2++;
